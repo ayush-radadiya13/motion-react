@@ -6,19 +6,22 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import {
   Menubar,
+  MenubarPortal,
   MenubarMenu,
   MenubarTrigger,
   MenubarContent,
+  MenubarGroup,
+  MenubarSeparator,
+  MenubarLabel,
   MenubarItem,
+  MenubarShortcut,
   MenubarCheckboxItem,
   MenubarRadioGroup,
   MenubarRadioItem,
-  MenubarSeparator,
-  MenubarShortcut,
   MenubarSub,
-  MenubarSubContent,
   MenubarSubTrigger,
-} from "@/components/ui/menubar"
+  MenubarSubContent,
+} from "/components/ui/menubar"
 
 export function Header() {
   const [showHeader, setShowHeader] = useState(true)

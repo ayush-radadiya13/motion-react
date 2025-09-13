@@ -1,13 +1,13 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import { Button } from "./component/ui/button"
+import { Button } from "./components/ui/button"
 import { motion } from "framer-motion"
-import { Card } from "./component/ui/card"
-import ScrollProgressCircle from "./component/scrolling"
-import Footer from "./component/footer"
-import { Header } from "./component/header"
-import { CarouselPlugin } from "./component/auto-product-scrolling"
+import { Card } from "./components/ui/card"
+import ScrollProgressCircle from "./components/scrolling"
+import Footer from "./components/footer"
+import { Header } from "./components/header"
+import { CarouselPlugin } from "./components/auto-product-scrolling"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
