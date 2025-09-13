@@ -34,7 +34,6 @@ export default function AboutUsPage() {
       <Header />
       <div className="min-h-screen py-15 relative overflow-x-hidden">
         <div className="px-4 sm:px-6 md:px-12 py-6 max-w-7xl mx-auto">
-          {/* About Us Heading with Gradient Background */}
           <motion.div
             className="relative py-8 flex flex-col items-center text-center space-y-4"
             initial="hidden"

@@ -1,22 +1,22 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { CarouselPlugin } from "@/components/autoimagescrooling";
-import { Card } from "@/components/ui/card";
-import ScrollProgressCircle from "@/components/scrolling-p";
-import Footer from "@/components/footer";
-import { Header } from "@/components/header";
+"use client"
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "./component/ui/button"
+import { motion } from "framer-motion"
+import { Card } from "./component/ui/card"
+import ScrollProgressCircle from "./component/scrolling"
+import Footer from "./component/footer"
+import { Header } from "./component/header"
+import { CarouselPlugin } from "./component/auto-product-scrolling"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] },
-  },
-};
+    transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }
+  }
+}
 
 export default function HomePage() {
   return (
@@ -25,7 +25,7 @@ export default function HomePage() {
       <div
         className="min-h-screen py-20 flex bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
-          backgroundImage: `url('/finalimage.jpg')`,
+          backgroundImage: `url('/finalimage.jpg')`
         }}
       >
         <main
@@ -49,8 +49,8 @@ export default function HomePage() {
               className="px-3 sm:px-6 md:px-8 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-relaxed text-white"
               style={{ fontFamily: "Century Gothic, sans-serif" }}
             >
-              "Smart automation solutions tailored for complex industrial motion
-              control challenges."
+              "Smart automation solutions tailored for complex industrial
+              motionvvcontrol challenges."
             </p>
             <Button
               asChild
@@ -178,7 +178,7 @@ export default function HomePage() {
         variants={fadeUp}
       >
         <div className="flex justify-center w-full">
-          <CarouselPlugin />
+          <CarouselPlugin/>
         </div>
       </motion.div>
 
@@ -249,5 +249,5 @@ export default function HomePage() {
       <ScrollProgressCircle />
       <Footer />
     </div>
-  );
+  )
 }
