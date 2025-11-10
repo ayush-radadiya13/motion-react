@@ -6,7 +6,7 @@ import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa"
 export default function Footer() {
   return (
     <footer className="py-6 mt-10">
-      <hr className=" my-4 border border-pink-500" />
+      <hr className=" my-4 border border-blue-400" />
       <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center sm:justify-between gap-6">
         {/* Left side - social icons */}
         <div className="flex space-x-8">

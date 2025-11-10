@@ -1,84 +1,78 @@
 "use client"
+import { motion } from "framer-motion"
+import Link from "next/link"
 
-import * as React from "react"
-import Image from "next/image"
-import Autoplay from "embla-carousel-autoplay"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from "@/app/component/ui/carousel"
+function ProductCard({ image, title, description, link }) {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="group relative w-full shadow-lg overflow-hidden bg-white cursor-pointer rounded-lg"
+    >
+      {/* Image */}
+      <div className="h-52 w-full overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+      </div>
 
-const images = [
-  "/automation.jpg",
-  "/core values.jpg",
-  "/mainimage.jpg",
-  "/vision.jpg",
-  "/mission.jpg"
-]
+      {/* Content */}
+      <div className="p-4 flex flex-col justify-between h-40">
+        <h3 className="text-lg font-semibold text-gray-800 truncate">{title}</h3>
+        <p className="text-sm text-gray-500 line-clamp-2">{description}</p>
+
+        {/* Centered Button */}
+        <div className="flex items-center justify-center mt-6">
+          <Link href={link}>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-5 py-2  bg-gradient-to-r bg-blue-400 text-white text-sm font-medium shadow-md hover:from-indigo-600 hover:to-purple-700 transition"
+            >
+              Read More....
+            </motion.button>
+          </Link>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
 
 export function CarouselPlugin() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
+  const products = [
+    {
+      image: "/mitsubishi.jpg",
+      title: "MITSUBISHI ",
+      description: "Automation PLC controllers, VFD / servo motors and drives....",
+      link: "/overview/mitsubishi",
+    },
+    {
+      image: "/veichi.jpg",
+      title: "VEICHI",
+      description: "Automation PLC controllers, VFD / servo motors and drives....",
+      link: "/overview/veichi",
+    },
+    {
+      image: "/controller.jpg",
+      title: "CNC Controller",
+      description: "Controls CNC machines for accurate....",
+      link: "/overview/controller",
+    },
+    {
+      image: "/mainimage.jpg",
+      title: "CNC AUTOLOADER ",
+      description: "manufacturing by CNC Autoloader, Robotics, SPM Machine....",
+      link: "/cncautoloader",
+    },
+  ]
 
   return (
-    <Carousel
-      plugins={[plugin.current]}
-      className="w-full relative"
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
-    >
-      <CarouselContent>
-        {images.map((src, index) => (
-          <CarouselItem key={index}>
-            {/* Container with max-width and centered */}
-            <div className="relative mx-auto max-w-[90%] md:max-w-[700px] h-[400px]">
-              <Image
-                src={src}
-                alt={`Image ${index + 1}`}
-                fill
-                className="object-cover rounded-2xl"
-                sizes="(max-width: 768px) 100vw, 700px"
-                // preload first image
-                priority={index === 0}
-              />
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-
-      <CarouselPrevious
-        className="
-          absolute top-1/2 left-2 -translate-y-1/2 z-20
-       bg-opacity-40 hover:bg-opacity-70
-       rounded-full
-          w-8 h-8
-          flex items-center justify-center
-          p-1.5
-          cursor-pointer
-          touch-manipulation
-        "
-      >
-        &#8592;
-      </CarouselPrevious>
-
-      <CarouselNext
-        className="
-          absolute top-1/2 right-2 -translate-y-1/2 z-20
-          bg-opacity-40 hover:bg-opacity-70
-          rounded-full
-          w-8 h-8
-          flex items-center justify-center
-          p-1.5
-          cursor-pointer
-          touch-manipulation
-        "
-      >
-        &#8594;
-      </CarouselNext>
-    </Carousel>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+      {products.map((product, idx) => (
+        <ProductCard key={idx} {...product} />
+      ))}
+    </div>
   )
 }
