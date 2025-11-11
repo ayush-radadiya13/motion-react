@@ -29,7 +29,7 @@ const companies = [
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="bg-white">
       <Header />
       {/* Hero Section */}
         <div
