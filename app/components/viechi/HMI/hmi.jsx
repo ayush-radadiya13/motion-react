@@ -42,13 +42,13 @@ export default function SpecSheet() {
 
       {/* Heading & Description */}
       <motion.div
-        className="relative flex flex-col items-center text-center mt-14 space-y-4 w-full max-w-5xl"
+        className="relative flex flex-col items-center text-center mt-14 space-y-4 w-full max-w-8xl"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <div className="w-full bg-gray-100 ">
-          <h1 className="py-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+            <h1 className="text-2xl sm:text-3xl p-3 md:text-4xl font-bold">
             HMI
           </h1>
         </div>

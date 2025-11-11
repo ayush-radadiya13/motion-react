@@ -61,19 +61,23 @@ export default function VFD() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-800">
-      <Header />
+      <motion.div
+          className="min-h-screen flex flex-col items-center bg-white justify-center px-4 sm:px-8 lg:px-12 py-10 space-y-10"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+      >
+          <Header />
 
       {/* --- Title Section --- */}
-      <motion.div
-        className="max-w-7xl mx-auto mt-12 px-6 py-8 text-center space-y-4"
+      <motion.div className="relative flex flex-col items-center text-center mt-10 space-y-4 w-full max-w-8xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeUp}
       >
           <div className="w-full mt-4 bg-gray-100 ">
-          <h1 className="py-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+              <h1 className="text-2xl sm:text-3xl p-3 md:text-4xl font-bold">
                                     VFD 
 
           </h1>
@@ -94,7 +98,7 @@ export default function VFD() {
       </div>
 
       <ScrollProgressCircle />
-    </div>
+    </motion.div>
   );
 }
 

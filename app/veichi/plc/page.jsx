@@ -1,5 +1,5 @@
 
-import PLC from "@/app/components/viechi/PLC/vc1";
+import PLC from "@/app/components/viechi/PLC/plc";
 import React from "react";
 
 const PLC1 = () => {

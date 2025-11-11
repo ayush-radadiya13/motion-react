@@ -39,7 +39,7 @@ export default function HomePage() {
             <main className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center space-y-6">
                 <div className="max-w-4xl w-full space-y-8 animate-fade-in">
                     <h2
-                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-600 py-1 rounded"
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-blue-600 py-1 rounded"
                         style={{ fontFamily: "Century Gothic, sans-serif" }}
                     >
                         Welcome to
@@ -47,7 +47,7 @@ export default function HomePage() {
                     </h2>
 
                     <p
-                        className="px-3 sm:px-6 md:px-8 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-relaxed text-black"
+                        className="px-3 sm:px-6 md:px-8 text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold leading-relaxed text-black"
                         style={{ fontFamily: "Century Gothic, sans-serif" }}
                     >
                         "Smart automation solutions tailored for complex industrial motion control challenges."
@@ -290,7 +290,7 @@ export default function HomePage() {
               variant="outline"
               className="px-8 py-6 rounded-full border-2 border-blue-400 text-blue-400 font-semibold hover:bg-blue-400 hover:text-white transition-colors duration-300 whitespace-nowrap"
             >
-              <Link href="/contect-us">Contact Us</Link>
+              <Link href="/contact-us">Contact Us</Link>
             </Button>
           </section>
         </Card>

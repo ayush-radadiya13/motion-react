@@ -68,7 +68,7 @@ export default function ProductOverview() {
                 transition={{ duration: 0.8 }}
             >
                 <div className="w-full bg-gray-100">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                     MITSUBISHI PRODUCTS
                 </h1>
                 <p className="text-blue-500 font-medium text-lg sm:text-xl">

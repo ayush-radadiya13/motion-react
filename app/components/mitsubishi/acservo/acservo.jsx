@@ -143,7 +143,7 @@ network flexibility, and reliability for advanced automation systems.
                 transition={{ duration: 0.8 }}
             >
                 <div className="w-full bg-gray-100 py-3">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                          SERVO DRIVER AND MOTOR
                     </h1>
                     <p className="text-blue-400 mt-2 font-semibold text-lg">

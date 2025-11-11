@@ -130,7 +130,7 @@ The Mitsubishi Electric GS2110-WTBD-N is a 10-inch widescreen HMI from the GOT S
                 transition={{ duration: 0.8 }}
             >
                 <div className="w-full bg-gray-100">
-                    <h1 className="py-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+                    <h1 className="text-2xl sm:text-3xl p-3 md:text-4xl font-bold">
                         HMI
                     </h1>
                 </div>

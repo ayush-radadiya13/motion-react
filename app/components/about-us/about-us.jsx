@@ -45,7 +45,7 @@ export default function AboutUsPage() {
                     variants={fadeUp}
                 >
                     <div className="w-full bg-gray-100">
-                        <h1 className="py-5 text-2xl sm:text-5xl md:text-4xl font-bold bg-gray-700 bg-clip-text text-transparent ">
+                        <h1 className="text-2xl sm:text-3xl p-3 md:text-4xl font-bold">
                             About Us
                         </h1>
                     </div>

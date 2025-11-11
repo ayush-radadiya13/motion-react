@@ -77,19 +77,24 @@ export default function PLC() {
     ];
 
     return (
-        <div className="min-h-screen bg-white text-gray-800">
+        <motion.div
+            className="min-h-screen flex flex-col items-center bg-white justify-center px-4 sm:px-8 lg:px-12 py-10 space-y-10"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+        >
             <Header />
 
             {/* --- Title Section --- */}
             <motion.div
-                className="max-w-7xl mx-auto mt-12 px-6 py-8 text-center space-y-4"
+                className="relative flex flex-col items-center text-center mt-14 space-y-4 w-full max-w-8xl"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
             >
                 <div className="w-full mt-4 bg-gray-100 ">
-          <h1 className="py-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+                    <h1 className="text-2xl sm:text-3xl p-3 md:text-4xl font-bold">
                                     PLC 
 
           </h1>
@@ -109,7 +114,7 @@ export default function PLC() {
             </div>
 
             <ScrollProgressCircle />
-        </div>
+        </motion.div>
     );
 }
 
@@ -121,7 +126,7 @@ function PLCSection({ plc, index, fadeUp }) {
 
     return (
         <motion.div
-            className={`grid grid-cols-1 md:grid-cols-2 items-center gap-10 ${
+            className={`grid grid-cols-1 md:grid-cols-2 border-2 p-6 items-center gap-10 ${
                 index % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
             initial="hidden"
