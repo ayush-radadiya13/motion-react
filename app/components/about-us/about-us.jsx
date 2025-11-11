@@ -33,7 +33,7 @@ export default function AboutUsPage() {
     const [loading] = useState(false);
 
     return (
-        <div>
+        <div className="min-h-screen w-full bg-white relative overflow-x-hidden">
             <Header />
             <div className="min-h-screen mt-15 w-full bg-white relative overflow-x-hidden">
                 {/* ---------- TITLE SECTION (FULL WIDTH) ---------- */}
