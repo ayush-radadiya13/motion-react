@@ -50,7 +50,7 @@ const RatingsReviews = () => {
 
     const StarRating = ({ rating, filled = true }) => {
         return (
-            <div className="flex gap-0.5">
+            <div className="flex  bg-white gap-0.5">
                 {[1, 2, 3, 4, 5].map((star) => (
                     <span
                         key={star}

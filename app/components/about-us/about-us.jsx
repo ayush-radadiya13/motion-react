@@ -35,7 +35,7 @@ export default function AboutUsPage() {
     return (
         <div>
             <Header />
-            <div className="min-h-screen mt-15 w-full  relative overflow-x-hidden">
+            <div className="min-h-screen mt-15 w-full bg-white relative overflow-x-hidden">
                 {/* ---------- TITLE SECTION (FULL WIDTH) ---------- */}
                 <motion.div
                     className="relative mt-10 flex flex-col items-center text-center space-y-4 px-6 sm:px-12"

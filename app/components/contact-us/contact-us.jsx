@@ -57,7 +57,7 @@ export default function ContactFormPage() {
   }
 
   return (
-    <div className="min-h-screen  overflow-x-hidden ">
+    <div className="min-h-screen bg-white overflow-x-hidden ">
       <Header />
 
       {/* Hero Section */}

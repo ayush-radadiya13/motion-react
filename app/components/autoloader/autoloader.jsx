@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/app/components/ui/card";
 import { Header } from "@/app/components/header";
 
-export default function CNCAutoloader() {
+export default function     CNCAutoloader() {
     const fadeUp = {
         hidden: { opacity: 0, y: 40 },
         visible: {
