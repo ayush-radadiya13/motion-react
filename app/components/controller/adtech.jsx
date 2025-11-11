@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/app/components/ui/card";
 import { Header } from "@/app/components/header";
 
-export default function DeltaCNCController() {
+export default function ADTECHCNCController() {
     const fadeUp = {
         hidden: { opacity: 0, y: 40 },
         visible: {
@@ -19,10 +19,9 @@ export default function DeltaCNCController() {
 
     // --- Carousel Images ---
     const images = [
-        { src: "/delta/cnc-all.jpg", label: "User-Friendly CNC Interface" },
-        { src: "/delta/cnc-1.jpg", label: "Delta CNC Controller - Front View" },
-        { src: "/delta/cnc-2.jpg", label: "High-Speed Dual CPU System" },
-        { src: "/delta/cnc-3.jpg", label: "Delta Servo Drive Integration" },
+        { src: "/delta/cnc-3.webp", label: "Integrated Servo Control Platform" },
+        { src: "/delta/cnc-1.jpg", label: "ADTECH CNC Controller Front Panel" },
+        { src: "/delta/cnc-2.jpg", label: "High-Speed Industrial CNC Board" },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,10 +47,10 @@ export default function DeltaCNCController() {
             >
                 <div className="w-full bg-gray-100 py-3">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
-                        Delta CNC Controller
+                        ADTECH CNC Controller
                     </h1>
                     <p className="text-blue-600 mt-2 font-semibold text-lg">
-                        Model: B-Series / General-Purpose CNC Controllers
+                        Model: ADT Series / High-Precision CNC Control System
                     </p>
                 </div>
             </motion.div>
@@ -95,9 +94,7 @@ export default function DeltaCNCController() {
                             fill
                             className="object-contain rounded-2xl"
                         />
-                        <div className="mt-3 mb-2 bg-blue-400 rounded-xl text-white text-xs sm:text-sm px-4 py-1 sm:py-2 shadow">
-                            {images[currentIndex].label}
-                        </div>
+
                     </motion.div>
                 </AnimatePresence>
             </motion.div>
@@ -128,22 +125,21 @@ export default function DeltaCNCController() {
                 transition={{ duration: 0.8 }}
                 className="w-full max-w-7xl"
             >
-                <Card className="p-6 sm:p-8 shadow-md rounded-2xl">
-                    <CardContent className="space-y-10 text-gray-800">
+                <div className="p-6 sm:p-8 border-2 space-y-10">
                         {/* Features & Benefits */}
                         <section>
                             <h2 className="text-2xl font-semibold text-blue-400 mb-4">
                                 Features & Benefits
                             </h2>
                             <ul className="list-disc list-inside space-y-2">
-                                <li>Built-in 32-bit high-speed dual CPU for multitasking and top performance.</li>
-                                <li>Implements data transmission and noise suppression with Delta high-speed servo drives.</li>
-                                <li>High-resolution encoder (up to 0.1 µm accuracy) for smooth and precise motion.</li>
-                                <li>Automatic gain adjustment ensures optimal motion control during tuning.</li>
-                                <li>New DOPSoft-based HMI customization interface for user flexibility.</li>
-                                <li>USB port for easy data access and parameter backup.</li>
-                                <li>Optional spindle types — communication or analog voltage type.</li>
-                                <li>MPG function allows manual pulse or handwheel control with push button.</li>
+                                <li>Powerful industrial-grade 32-bit multi-core processor.</li>
+                                <li>Supports 3~6 axis simultaneous motion with high-speed interpolation.</li>
+                                <li>EtherCAT and Modbus communication compatibility for flexible integration.</li>
+                                <li>Built-in PLC function for customized automation control.</li>
+                                <li>Large color LCD display with intuitive touch interface.</li>
+                                <li>Supports G-code programming and macro commands.</li>
+                                <li>Real-time diagnostics and error monitoring system.</li>
+                                <li>Compact all-in-one design — reduces wiring and setup time.</li>
                             </ul>
                         </section>
 
@@ -153,19 +149,18 @@ export default function DeltaCNCController() {
                                 Product Overview
                             </h2>
                             <p className="leading-relaxed">
-                                Delta's general-purpose CNC controllers integrate an HMI to create a
-                                user-friendly operating interface and customizable functions tailored
-                                to specific industrial needs. Built with Delta’s <b>DMCNET motion bus</b>,
-                                these controllers deliver high-speed, high-precision, and smooth operation
-                                when paired with Delta’s <b>ASDA-A3</b> or <b>ASDA-B3</b> series servo drives,
-                                and support both <b>PM</b> and <b>IM spindle motors</b>.
+                                The ADTECH CNC Controller Series provides high-speed, high-accuracy
+                                motion control solutions for industrial machining applications.
+                                With integrated motion, I/O, and communication modules, the ADTECH
+                                controller ensures smooth interpolation and stable operation for
+                                complex multi-axis systems.
                             </p>
                             <p className="mt-3 leading-relaxed">
-                                Supporting standard <b>ISO G-code</b> format and advanced motion algorithms,
-                                Delta CNC controllers enable efficient and flexible machining for
-                                applications like milling, drilling, and tapping. With Delta’s long-term
-                                industrial experience, these controllers are designed to enhance productivity
-                                and help manufacturers stay competitive.
+                                Designed with a user-friendly HMI and G-code compatibility, the ADTECH
+                                CNC platform simplifies configuration and enhances productivity for
+                                machine tools such as lathes, milling machines, and engraving systems.
+                                It combines precision, flexibility, and reliability in a compact
+                                industrial-grade unit.
                             </p>
                         </section>
 
@@ -175,11 +170,11 @@ export default function DeltaCNCController() {
                                 Communication & Compatibility
                             </h2>
                             <ul className="list-disc list-inside space-y-2">
-                                <li>Seamless integration with Delta Servo Systems and spindles.</li>
-                                <li>Supports Delta DMCNET, EtherCAT, and MECHATROLINK communication.</li>
-                                <li>Compatible with ASDA-A3 and ASDA-B3 servo drives.</li>
-                                <li>High-speed motion synchronization with advanced noise immunity.</li>
-                                <li>Real-time control for complex, multi-axis operations.</li>
+                                <li>Supports EtherCAT, Modbus, and RS-485 communication.</li>
+                                <li>Compatible with ADTECH servo drives and third-party systems.</li>
+                                <li>Multi-axis synchronization with smooth path control.</li>
+                                <li>Built-in spindle control with analog and pulse output modes.</li>
+                                <li>Customizable PLC logic for machine-specific operations.</li>
                             </ul>
                         </section>
 
@@ -189,14 +184,13 @@ export default function DeltaCNCController() {
                                 Applications
                             </h2>
                             <ul className="list-disc list-inside space-y-2">
-                                <li>CNC milling, drilling, and tapping machines.</li>
-                                <li>Precision part manufacturing and die-cutting systems.</li>
-                                <li>Automated industrial machinery with multi-axis motion.</li>
-                                <li>Custom machining solutions requiring fast response and accuracy.</li>
+                                <li>CNC turning, milling, and engraving machines.</li>
+                                <li>Automatic tool changers and machining centers.</li>
+                                <li>Metal cutting, drilling, and shaping machinery.</li>
+                                <li>Precision mold and die manufacturing systems.</li>
                             </ul>
                         </section>
-                    </CardContent>
-                </Card>
+                </div>
             </motion.div>
         </motion.div>
     );

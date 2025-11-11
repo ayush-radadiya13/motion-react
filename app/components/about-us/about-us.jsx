@@ -8,6 +8,7 @@ import CountUp from "react-countup";
 import { Header } from "../header";
 import ScrollProgressCircle from "../scrolling";
 import Footer from "../footer";
+import RatingsReviews from "@/app/components/about-us/review";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -25,6 +26,8 @@ const stats = [
     { value: 9, label: "Year of Experience", suffix: "+" },
 ];
 
+
+
 export default function AboutUsPage() {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
     const [loading] = useState(false);
@@ -32,17 +35,17 @@ export default function AboutUsPage() {
     return (
         <div>
             <Header />
-            <div className="min-h-screen w-full py-15 relative overflow-x-hidden">
+            <div className="min-h-screen mt-15 w-full  relative overflow-x-hidden">
                 {/* ---------- TITLE SECTION (FULL WIDTH) ---------- */}
                 <motion.div
-                    className="relative py-8 flex flex-col items-center text-center space-y-4"
+                    className="relative mt-10 flex flex-col items-center text-center space-y-4 px-6 sm:px-12"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={fadeUp}
                 >
                     <div className="w-full bg-gray-100">
-                        <h1 className="py-5 text-2xl sm:text-5xl md:text-4xl font-bold bg-gray-700 bg-clip-text text-transparent">
+                        <h1 className="py-5 text-2xl sm:text-5xl md:text-4xl font-bold bg-gray-700 bg-clip-text text-transparent ">
                             About Us
                         </h1>
                     </div>
@@ -63,7 +66,7 @@ export default function AboutUsPage() {
 
                     {/* Team & Intro Section */}
                     <motion.div
-                        className="py-16 bg-gray-100 p-3 flex flex-col md:flex-row items-center text-center md:text-left gap-8 mb-16 w-full"
+                        className="mt-16 bg-gray-100 p-3 py-12 px-10 flex flex-col md:flex-row items-center text-center md:text-left gap-8 mb-16 w-full"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -99,7 +102,7 @@ export default function AboutUsPage() {
 
                     {/* Core Values Section */}
                     <motion.div
-                        className="flex flex-col bg-gray-100 p-3 py-12 md:flex-row-reverse items-center gap-8 mb-16 text-center md:text-left w-full"
+                        className="flex flex-col bg-gray-100  px-10 p-3 py-12 md:flex-row-reverse items-center gap-8 mb-16 text-center md:text-left w-full"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -252,7 +255,7 @@ export default function AboutUsPage() {
                             <p className="text-xs sm:text-sm font-semibold uppercase mb-2 text-blue-400">
                                 Quality Work
                             </p>
-                            <div className="text-3xl sm:text-4xl font-bold bg-blue-400 bg-clip-text text-transparent">
+                            <div className="text-3xl sm:text-4xl font-bold bg-gray-400 bg-clip-text text-transparent">
                                 We Develop Top <br /> Production Solutions
                             </div>
                             <p className="mt-4 sm:mt-2 leading-relaxed text-sm sm:text-base">
@@ -318,7 +321,17 @@ export default function AboutUsPage() {
                         </div>
                     </div>
                 </section>
-
+                <motion.section
+                    className=" flex justify-center items-center text-center"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
+                >
+                    <div className="w-full mt-10 max-w-7xl">
+                        <RatingsReviews />
+                    </div>
+                </motion.section>
                 <ScrollProgressCircle />
             </div>
 

@@ -7,7 +7,7 @@ function ProductCard({ image, title, description, link }) {
     <motion.div
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="group relative w-full shadow-lg overflow-hidden bg-white cursor-pointer rounded-lg"
+      className="group relative w-full border-2 overflow-hidden bg-white cursor-pointer "
     >
       {/* Image */}
       <div className="h-52 w-full overflow-hidden">

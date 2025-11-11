@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { Header } from "@/app/components/header";
 import Link from "next/link";
 import { Button } from "@/app/components/ui/button";
+import ScrollProgressCircle from "@/app/components/scrolling";
+import Footer from "@/app/components/footer";
 
 export default function CNCController() {
     const fadeUp = {
@@ -19,7 +21,7 @@ export default function CNCController() {
 
     const products = [
         {
-            title: "Delta CNC Controller",
+            title: "Adtech CNC Controller",
             description:
                 "Advanced CNC control systems designed for precision machining and multi-axis motion control. Delta CNC controllers provide high-speed processing, excellent stability, and seamless servo communication for milling, drilling, and turning applications.",
             image: "/delta/cnc-all.jpg",
@@ -35,6 +37,7 @@ export default function CNCController() {
     ];
 
     return (
+        <div>
         <motion.div
             className="min-h-screen bg-white flex flex-col items-center px-4 sm:px-8 lg:px-12 py-12 space-y-16"
             initial="hidden"
@@ -106,6 +109,10 @@ export default function CNCController() {
                     </motion.div>
                 ))}
             </div>
+
         </motion.div>
+            <ScrollProgressCircle />
+            <Footer/>
+        </div>
     );
 }

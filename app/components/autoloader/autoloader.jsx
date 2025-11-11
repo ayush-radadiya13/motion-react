@@ -19,10 +19,10 @@ export default function CNCAutoloader() {
 
     // --- Carousel Images ---
     const images = [
-        { src: "/autoloader/cnc-auto.jpg", label: "CNC Autoloader – Installed on CNC Machine" },
-        { src: "/autoloader/cnc-auto2.jpg", label: "Pneumatic and Servo Control System" },
-        { src: "/autoloader/cnc-auto3.jpg", label: "Raw Material Loading & Finished Component Unloading" },
-        { src: "/autoloader/cnc-auto4.jpg", label: "Custom-Built CNC Autoloader Design" },
+        { src: "/cnc-autoloader.jpg", label: "CNC Autoloader – Installed on CNC Machine" },
+        // { src: "/autoloader/cnc-auto2.jpg", label: "Pneumatic and Servo Control System" },
+        // { src: "/autoloader/cnc-auto3.jpg", label: "Raw Material Loading & Finished Component Unloading" },
+        // { src: "/autoloader/cnc-auto4.jpg", label: "Custom-Built CNC Autoloader Design" },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,7 +41,7 @@ export default function CNCAutoloader() {
 
             {/* Title Section */}
             <motion.div
-                className="relative flex flex-col items-center text-center mt-14 space-y-4 w-full max-w-7xl"
+                className="relative flex flex-col items-center text-center mt-14 space-y-4 w-full max-w-8xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -126,8 +126,7 @@ export default function CNCAutoloader() {
                 transition={{ duration: 0.8 }}
                 className="w-full max-w-7xl"
             >
-                <Card className="p-6 sm:p-8 shadow-md rounded-2xl">
-                    <CardContent className="space-y-10 text-gray-800">
+                <div className="p-6 sm:p-8 border-2 space-y-10">
 
                         {/* Intro Section */}
                         <section>
@@ -186,8 +185,7 @@ export default function CNCAutoloader() {
                                 to maximize productivity and reduce manual intervention.
                             </p>
                         </section>
-                    </CardContent>
-                </Card>
+                </div>
             </motion.div>
         </motion.div>
     );

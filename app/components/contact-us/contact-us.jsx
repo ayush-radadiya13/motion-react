@@ -7,6 +7,7 @@ import { Button } from "../ui/button"
 import { Header } from "../header"
 import { ContactPage } from "../address"
 import { Card } from "../ui/card"
+import Footer from "@/app/components/footer";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -56,12 +57,12 @@ export default function ContactFormPage() {
   }
 
   return (
-    <div className="min-h-screen py-10 overflow-x-hidden bg-white">
+    <div className="min-h-screen  overflow-x-hidden ">
       <Header />
 
       {/* Hero Section */}
       <motion.div
-        className="relative py-12 flex flex-col items-center text-center space-y-4 px-6 sm:px-12"
+        className="relative mt-25 flex flex-col items-center text-center space-y-4 px-6 sm:px-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -73,7 +74,7 @@ export default function ContactFormPage() {
           </h1>
         </div>
 
-        <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-8xl mt-4 px-2 sm:px-0">
+        <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-7xl mt-4 px-2 sm:px-0">
           We’d love to hear from you! Whether you have questions about our products, need technical support, 
           or want to discuss potential collaborations — our team at 
           <b className="text-blue-400"> MOTION AUTOMATION </b> 
@@ -198,7 +199,7 @@ export default function ContactFormPage() {
 
         {/* Right: Address / Contact Info */}
         <motion.div
-          className="relative w-full md:w-1/2 py-12 px-2 sm:px-6"
+          className="relative w-full md:w-1/2  px-2 sm:px-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -229,7 +230,7 @@ export default function ContactFormPage() {
         viewport={{ once: true }}
         variants={fadeUp}
       >
-        <Card className="relative border h-72 md:h-96 lg:h-[20rem] flex items-center justify-center px-6 sm:px-14 max-w-9xl mx-auto bg-white">
+        <Card className="relative border h-72 md:h-96 lg:h-[20rem] flex items-center justify-center px-6 sm:px-14 max-w-7xl mx-auto bg-white">
           <div className="pointer-events-none absolute top-0 left-0 w-full h-full bg-[url('/pngimage.png')] bg-no-repeat bg-left opacity-10" />
           <div className="pointer-events-none absolute bottom-0 right-0 w-48 h-full bg-[url('/pattern-right.svg')] bg-no-repeat bg-right opacity-10" />
 
@@ -244,13 +245,14 @@ export default function ContactFormPage() {
             <Button
               asChild
               variant="outline"
-              className="px-6 py-4 rounded-full border border-blue-700 text-blue-700 font-semibold hover:bg-blue-400 hover:text-white transition-colors duration-300 whitespace-nowrap"
+              className="px-8 py-6 rounded-full border-2 border-blue-400 text-blue-400 font-semibold hover:bg-blue-400 hover:text-white transition-colors duration-300 whitespace-nowrap"
             >
               <Link href="/about-us">About Us</Link>
             </Button>
           </div>
         </Card>
       </motion.div>
+
 
       {/* Slide animation keyframes */}
       <style jsx>{`
@@ -266,6 +268,7 @@ export default function ContactFormPage() {
           }
         }
       `}</style>
+        <Footer/>
     </div>
   )
 }

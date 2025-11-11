@@ -19,10 +19,10 @@ export default function SPMMachinePage() {
 
     // --- Carousel Images ---
     const images = [
-        { src: "/spm/spm1.jpg", label: "High-Precision SPM Machine Assembly" },
-        { src: "/spm/spm2.jpg", label: "Custom-Built SPM for Component Machining" },
-        { src: "/spm/spm3.jpg", label: "Hydraulic & Servo-Controlled SPM" },
-        { src: "/spm/spm4.jpg", label: "Motion Automation SPM Manufacturing Facility" },
+        { src: "/spm machine.jpg", label: "High-Precision SPM Machine Assembly" },
+        // { src: "/spm/spm2.jpg", label: "Custom-Built SPM for Component Machining" },
+        // { src: "/spm/spm3.jpg", label: "Hydraulic & Servo-Controlled SPM" },
+        // { src: "/spm/spm4.jpg", label: "Motion Automation SPM Manufacturing Facility" },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,7 +41,7 @@ export default function SPMMachinePage() {
 
             {/* Title Section */}
             <motion.div
-                className="relative flex flex-col items-center text-center mt-14 space-y-4 w-full max-w-7xl"
+                className="relative flex flex-col items-center text-center mt-14 space-y-4 w-full max-w-8xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -128,8 +128,7 @@ export default function SPMMachinePage() {
                 transition={{ duration: 0.8 }}
                 className="w-full max-w-7xl"
             >
-                <Card className="p-6 sm:p-8 shadow-md rounded-2xl">
-                    <CardContent className="space-y-10 text-gray-800">
+                <div className="p-6 sm:p-8 border-2 space-y-10">
 
                         {/* Overview */}
                         <section>
@@ -199,8 +198,7 @@ export default function SPMMachinePage() {
                             </p>
                         </section>
 
-                    </CardContent>
-                </Card>
+                </div>
             </motion.div>
         </motion.div>
     );

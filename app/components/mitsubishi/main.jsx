@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { Header } from "@/app/components/header";
 import Link from "next/link";
 import { Button } from "@/app/components/ui/button";
+import ScrollProgressCircle from "@/app/components/scrolling";
+import Footer from "@/app/components/footer";
 
 export default function ProductOverview() {
     const fadeUp = {
@@ -49,6 +51,7 @@ export default function ProductOverview() {
     ];
 
     return (
+        <div>
         <motion.div
             className="min-h-screen bg-white flex flex-col items-center px-4 sm:px-8 lg:px-12 py-12 space-y-16"
             initial="hidden"
@@ -59,17 +62,19 @@ export default function ProductOverview() {
 
             {/* Page Title */}
             <motion.div
-                className="text-center mt-14 space-y-3"
+                className="relative flex flex-col items-center text-center mt-14 space-y-6 w-full max-w-8xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
             >
+                <div className="w-full bg-gray-100">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
                     MITSUBISHI PRODUCTS
                 </h1>
                 <p className="text-blue-500 font-medium text-lg sm:text-xl">
                     Industrial Automation Solutions for Smart Manufacturing
                 </p>
+                </div>
             </motion.div>
 
             {/* Product Sections */}
@@ -115,6 +120,10 @@ export default function ProductOverview() {
                     </motion.div>
                 ))}
             </div>
+
         </motion.div>
+            <ScrollProgressCircle />
+            <Footer/>
+        </div>
     );
 }

@@ -49,7 +49,7 @@ export default function BSeriesCNC() {
             >
                 <div className="w-full bg-gray-100 py-3 ">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
-                         CNC Milling System
+                         Finger CNC Controller
                     </h1>
                     <p className="text-blue-600 mt-2 font-semibold text-lg">
                         Model : 300TA1-H , 400MA1-H , 600MB2-H , 800MB2-H
@@ -129,8 +129,7 @@ export default function BSeriesCNC() {
                 transition={{ duration: 0.8 }}
                 className="w-full max-w-7xl"
             >
-                <Card className="p-6 sm:p-8 shadow-md rounded-2xl">
-                    <CardContent className="space-y-10 text-gray-800">
+                <div className="p-6 sm:p-8 border-2 space-y-10">
                         {/* Product Introduction */}
                         <section>
                             <h2 className="text-2xl font-semibold text-blue-600 mb-4">
@@ -209,8 +208,7 @@ export default function BSeriesCNC() {
                                 <li>Real-time tapping monitoring for efficient setup and safety.</li>
                             </ul>
                         </section>
-                    </CardContent>
-                </Card>
+                </div>
             </motion.div>
         </motion.div>
     );

@@ -8,6 +8,7 @@ import ScrollProgressCircle from "./components/scrolling"
 import Footer from "./components/footer"
 import { Header } from "./components/header"
 import { CarouselPlugin } from "./components/auto-product-scrolling"
+import React from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -17,6 +18,14 @@ const fadeUp = {
     transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }
   }
 }
+
+const companies = [
+    { name: "MITSUBISHI", logo: "/logo/Mitsubishi.jpg" },
+    { name: "VIECHI", logo: "/logo/viechi.png" },
+    { name: "PEPPERL + FUCHS", logo: "/logo/P+F.png" },
+    { name: "FINGER CNC", logo: "/logo/fingercnc.png" },
+    { name: "ADTECH CNC", logo: "/logo/adtechlogo1.png" },
+];
 
 export default function HomePage() {
   return (
@@ -71,7 +80,7 @@ export default function HomePage() {
       >
         {/* Left side - Text */}
         <div className="w-full md:w-1/2 space-y-4 flex flex-col justify-center">
-          <h6 className="text-3xl sm:text-4xl font-semibold text-blue-600">
+          <h6 className="text-3xl sm:text-4xl font-semibold text-gray-400">
             Motion Automation
           </h6>
           <p className="text-base sm:text-lg leading-relaxed">
@@ -88,7 +97,7 @@ export default function HomePage() {
         {/* Right side - Image */}
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <Image
-            src="/2.jpg"
+            src="/panel/9.jpg"
             alt="Team"
             width={600}
             height={600}
@@ -99,37 +108,55 @@ export default function HomePage() {
 
       {/* What we offer Section */}
       <motion.div
-        className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-8 py-20"
+        className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-8 mt-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeUp}
       >
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
-          <div>
-            <p className="text-sm uppercase mb-2 text-blue-900">What we offer</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-blue-900 leading-tight">
-              Automation Solutions <br /> For All Industries
-            </h2>
-          </div>
-          <div className="text-base leading-relaxed">
-            <p className="mb-4">
-              Our Experienced Engineers and Technicians are committed to solving
-              your needs. We develop the Automation Solution as per your
-              requirement.
-            </p>
-            <p>
-              By implementing motion automation solutions, industries can
-              increase efficiency, reduce labor costs, and improve overall
-              productivity.
-            </p>
-          </div>
-        </section>
+
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
+              <div className="flex flex-col items-center text-center mb-6">
+                  {/* Mitsubishi Logo */}
+                  <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-24 mb-4 flex items-center justify-center">
+                      <Image
+                          src="/logo/Mitsubishi.jpg"
+                          alt="Mitsubishi Electric Logo"
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 176px"
+                              priority
+                      />
+                  </div>
+                  <p className="text-base sm:text-lg leading-relaxed max-w-2xl">
+                      <span className="font-semibold text-2xl text-blue-400">MOTION AUTOMATION</span> is a proud{" "}
+                      <span className="font-semibold text-2xl text-blue-400">
+      Mitsubishi Electric Factory Automation Channel Partner
+    </span>, delivering advanced automation solutions to drive industrial
+                      innovation and efficiency.
+                  </p>
+              </div>
+
+
+              <div className="text-base leading-relaxed">
+                  <p className="mb-4">
+                      With Mitsubishi’s world-class technology and our in-depth engineering
+                      expertise, we provide customized solutions that include{" "}
+                      <strong>PLCs, HMIs, AC Drives, Servo Systems, CNC Controllers</strong>,
+                      and complete motion control integration for every type of industry.
+                  </p>
+                  <p className="mb-4">
+                      Our technical excellence and domain knowledge enable us to deliver
+                      reliable, efficient, and future-ready automation systems that enhance
+                      production, reduce downtime, and improve quality.
+                  </p>
+              </div>
+          </section>
       </motion.div>
 
       {/* Products Section */}
-      <div className="py-12 flex justify-center text-center px-4 sm:px-0">
-        <h1 className="text-xl sm:text-3xl font-bold text-blue-400">
+      <div className="  flex justify-center mt-14 text-center px-4 sm:px-0">
+        <h1 className="text-xl sm:text-3xl font-bold text-gray-400">
           PRODUCTS
         </h1>
       </div>
@@ -145,57 +172,116 @@ export default function HomePage() {
       </motion.div>
 
       {/* Core Values Section */}
-      <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div
-          className="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 mb-16 text-center md:text-left w-full"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-        >
-          <Image
-            src="/core values.jpg"
-            alt="Core Values"
-            width={600}
-            height={400}
-            className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-500 ease-in-out w-full md:w-1/2 object-cover"
-          />
-          <div className="w-full md:w-1/2 space-y-3">
-            <p className="text-base sm:text-md leading-relaxed">
-              <b>PROFESSIONAL APPROACH</b>
-            </p>
-            <h6 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-blue-400">
-              World Class Quality Is Our Priority
-            </h6>
-            <p className="text-base sm:text-xl leading-relaxed">
-              <b>
-                Motion Automation is a team of experienced employee contractor
-                and expert engineer.
-              </b>
-            </p>
-            <p>
-              We Work Under The Enthusiastic guidance of Our Team Member. Our
-              Team Have vast Experience in This Domain of Work.
-            </p>
-          </div>
-        </motion.div>
-      </section>
+        <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+            <motion.div
+                className="flex flex-col md:flex-row-reverse items-center justify-center gap-10 mb-16 text-center md:text-left w-full"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+            >
+                {/* Image Section */}
+                <div className="flex justify-center w-full md:w-1/2">
+                    <Image
+                        src="/core values.jpg"
+                        alt="Core Values"
+                        width={600}
+                        height={400}
+                        className="shadow-lg rounded-lg object-contain"
+                    />
+                </div>
+
+                {/* Text Section */}
+                <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4">
+                    <p className="text-base sm:text-md leading-relaxed font-semibold">
+                        PROFESSIONAL APPROACH
+                    </p>
+                    <h6 className="text-2xl sm:text-2xl md:text-3xl font-semibold text-blue-400">
+                        World Class Quality Is Our Priority
+                    </h6>
+                    <p className="text-base sm:text-xl leading-relaxed font-semibold">
+                        Motion Automation is a team of experienced employee contractor and expert engineer.
+                    </p>
+                    <p>
+                        We work under the enthusiastic guidance of our senior team members. Our team has vast
+                        experience and technical expertise in this domain of automation and engineering.
+                    </p>
+                </div>
+            </motion.div>
+        </section>
+
+
+        <section>
+            {/* Title Section */}
+            <motion.div
+                className="max-w-5xl mx-auto text-center mt-20 px-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+            >
+                <h2 className="text-3xl md:text-4xl font-bold text-center mt-6">
+                    <span className="text-gray-400">Innovative</span>
+                    <span> Industrial Solutions</span>
+                </h2>
+
+                <p className="max-w-5xl mx-auto pt-4 mb-10 text-base md:text-lg leading-relaxed">
+                    At <span className="font-semibold ">Motion Automation</span>,
+                    we specialize in delivering cutting-edge automation and control solutions
+                    for modern industries. Our wide range of products—from advanced PLC systems
+                    to high-performance AC drives and servo motors—empower manufacturers to achieve
+                    greater precision, speed, and reliability in every process.
+                </p>
+            </motion.div>
+
+            {/* Logos Section */}
+            <motion.div
+                className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 px-4 sm:px-6 md:px-0"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+            >
+                {companies.map((company, index) => (
+                    <motion.div
+                        key={index}
+                        className="flex flex-col items-center justify-center "
+                        variants={fadeUp}
+                    >
+                        <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-24 mb-4 flex items-center justify-center">
+                            <Image
+                                src={company.logo}
+                                alt={company.name}
+                                fill
+                                className="object-contain"
+                                sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 176px"
+                                priority
+                            />
+                        </div>
+                        {/*<p className="text-gray-700 font-semibold text-xs sm:text-sm md:text-base text-center leading-snug">*/}
+                        {/*    {company.name}*/}
+                        {/*</p>*/}
+                    </motion.div>
+                ))}
+            </motion.div>
+
+        </section>
 
       {/* Info Card Section */}
       <motion.div
-        className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+        className="max-w-screen-xl mx-auto px-4 sm:px-6 mt-5 lg:px-8 mb-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeUp}
       >
-        <Card className="w-full rounded-lg gap-20 px-6 sm:px-14 border-2 border-blue-400">
+        <Card className="w-full rounded-lg gap-20 px-6 sm:px-14 border-2 border-gray-400">
           <section className="flex flex-col sm:flex-row items-center justify-between py-10 px-2 sm:px-6">
             <div className="max-w-xl text-center sm:text-left mb-8 sm:mb-0">
-              <p className="text-sm font-semibold italic mb-2">
+              <p className="text-sm font-semibold text-blue-400  italic mb-2">
                 Don't be weird.
               </p>
-              <h2 className="text-3xl sm:text-4xl md:text-4xl font-extrabold leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-3xl font-bold ">
                 Would you like more information or do you have a question?
               </h2>
             </div>
