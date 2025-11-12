@@ -113,7 +113,7 @@ The Mitsubishi Electric FR-D800 Series is the evolution of the popular FR-D700, 
             >
                 <div className="w-full bg-gray-100 py-3">
                     <h1 className="text-2xl sm:text-3xl  md:text-4xl font-bold">
-                        MITSUBISHI INVERTERS
+                        VFD
                     </h1>
                     <p className="text-blue-400 mt-2 font-semibold text-lg">
                         FR-D700 | FR-D800 — Compact, Smart & Energy-Efficient Drive Solutions

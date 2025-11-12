@@ -78,7 +78,7 @@ export default function PLC() {
 
     return (
         <motion.div
-            className="min-h-screen flex flex-col items-center bg-white justify-center px-4 sm:px-8 lg:px-12 py-10 space-y-10"
+            className="min-h-screen flex flex-col items-center bg-white justify-center px-4 sm:px-4 lg:px-12 py-10 space-y-10"
             initial="hidden"
             animate="visible"
             variants={fadeUp}
@@ -107,7 +107,7 @@ export default function PLC() {
             </motion.div>
 
             {/* --- Alternating Image + Content Sections --- */}
-            <div className="max-w-7xl mx-auto px-6 py-12 space-y-20">
+            <div className="max-w-7xl mx-auto px-3 py-12 space-y-20">
                 {plcData.map((plc, index) => (
                     <PLCSection key={index} plc={plc} index={index} fadeUp={fadeUp} />
                 ))}
@@ -126,7 +126,7 @@ function PLCSection({ plc, index, fadeUp }) {
 
     return (
         <motion.div
-            className={`grid grid-cols-1 md:grid-cols-2 border-2 p-6 items-center gap-10 ${
+            className={`grid grid-cols-1 md:grid-cols-2 border-2 p-3 items-center gap-10 ${
                 index % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
             initial="hidden"

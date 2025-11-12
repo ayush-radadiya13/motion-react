@@ -35,10 +35,9 @@ export default function AboutUsPage() {
     return (
         <div className="min-h-screen w-full bg-white relative overflow-x-hidden">
             <Header />
-            <div className="min-h-screen mt-15 w-full bg-white relative overflow-x-hidden">
                 {/* ---------- TITLE SECTION (FULL WIDTH) ---------- */}
                 <motion.div
-                    className="relative mt-10 flex flex-col items-center text-center space-y-4 px-6 sm:px-12"
+                    className="relative mt-24 flex flex-col items-center text-center space-y-4 px-6 sm:px-12"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -333,7 +332,6 @@ export default function AboutUsPage() {
                     </div>
                 </motion.section>
                 <ScrollProgressCircle />
-            </div>
 
             <Footer />
         </div>

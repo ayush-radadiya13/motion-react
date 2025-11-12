@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/app/components/ui/card";
 import { Header } from "@/app/components/header";
+import ScrollProgressCircle from "@/app/components/scrolling";
 
 export default function SPMMachinePage() {
     const fadeUp = {
@@ -200,6 +201,8 @@ export default function SPMMachinePage() {
 
                 </div>
             </motion.div>
+            <ScrollProgressCircle />
+
         </motion.div>
     );
 }

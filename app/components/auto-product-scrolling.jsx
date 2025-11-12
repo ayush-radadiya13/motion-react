@@ -61,7 +61,7 @@ export function CarouselPlugin() {
       link: "/overview/controller",
     },
     {
-      image: "/mainimage.jpg",
+      image: "/cnc-autoloader.jpg",
       title: "CNC AUTOLOADER ",
       description: "manufacturing by CNC Autoloader, Robotics, SPM Machine....",
       link: "/cncautoloader",

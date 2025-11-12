@@ -91,7 +91,7 @@ export default function VFD() {
       </motion.div>
 
       {/* --- VFD Product Sections --- */}
-      <div className="max-w-7xl mx-auto px-6 py-12 space-y-20">
+      <div className="max-w-7xl mx-auto px-3 py-12 space-y-20">
         {vfdData.map((vfd, index) => (
           <VFDSection key={index} vfd={vfd} index={index} fadeUp={fadeUp} />
         ))}
@@ -110,7 +110,7 @@ function VFDSection({ vfd, index, fadeUp }) {
 
   return (
     <motion.div
-      className={`grid grid-cols-1 md:grid-cols-2 items-center gap-10 ${
+      className={`grid grid-cols-1 border-2 md:grid-cols-2 p-3 items-center gap-10 ${
         index % 2 === 1 ? "md:flex-row-reverse" : ""
       }`}
       initial="hidden"

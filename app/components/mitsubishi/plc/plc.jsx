@@ -115,7 +115,7 @@ export default function MitsubishiPLCPage() {
             >
                 <div className="w-full bg-gray-100 py-3">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-                        MITSUBISHI PLC
+                        PLC
                     </h1>
                     <p className="text-blue-400 mt-2 font-semibold text-lg">
                         FX3S | FX5S | FX5U — Compact to High-Performance Automation

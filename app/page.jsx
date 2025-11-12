@@ -236,7 +236,7 @@ export default function HomePage() {
 
             {/* Logos Section */}
             <motion.div
-                className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 px-4 sm:px-6 md:px-0"
+                className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-6 md:gap-8 px-2 sm:px-4 md:px-0"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -245,25 +245,27 @@ export default function HomePage() {
                 {companies.map((company, index) => (
                     <motion.div
                         key={index}
-                        className="flex flex-col items-center justify-center "
+                        className="flex flex-col items-center justify-center"
                         variants={fadeUp}
                     >
-                        <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-24 mb-4 flex items-center justify-center">
+                        <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-44 md:h-24 mb-2 sm:mb-4 flex items-center justify-center">
                             <Image
                                 src={company.logo}
                                 alt={company.name}
                                 fill
                                 className="object-contain"
-                                sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 176px"
+                                sizes="(max-width: 640px) 80px, (max-width: 768px) 112px, 176px"
                                 priority
                             />
                         </div>
-                        {/*<p className="text-gray-700 font-semibold text-xs sm:text-sm md:text-base text-center leading-snug">*/}
-                        {/*    {company.name}*/}
-                        {/*</p>*/}
+                        {/* Uncomment this if you want the names visible */}
+                        {/* <p className="text-gray-700 font-semibold text-xs sm:text-sm md:text-base text-center leading-snug">
+        {company.name}
+      </p> */}
                     </motion.div>
                 ))}
             </motion.div>
+
 
         </section>
 
